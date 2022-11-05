@@ -21,7 +21,8 @@ export const GetCharacters = () => {
                 <div className="b-card-container" key={JSON.stringify(item)}>
                     <img src={item.image} alt={item.name}></img>
                     <h3>{item.name}</h3>
-                </div>
+                </div> 
+                
             )
         } )}
     </div>
