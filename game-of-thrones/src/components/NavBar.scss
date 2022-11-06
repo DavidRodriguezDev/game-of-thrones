@@ -1,0 +1,23 @@
+@font-face{
+    font-family: 'GameofThrones';
+    src: url('../font/game-of-thrones/Game\ of\ Thrones.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.nav{
+    position:fixed;
+    bottom: 0px;
+    background-color: black;
+    height: 50px;
+
+    &--container{
+        font-family: 'GameofThrones';
+        
+        
+        a{
+        text-decoration: none;
+        color: white;
+        }
+    }
+}
