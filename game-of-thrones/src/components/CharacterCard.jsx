@@ -4,7 +4,7 @@ import './CharacterCard.scss'
 export const CharacterCard = ({characters}) => {
   
     return (
-    <div className='container d-flex flex-wrap gap-3 characters-gallery '>
+    <div className='container-fluid d-flex flex-wrap gap-4 characters-gallery '>
         {characters.map((item)=> 
         <div className='card-item' key={item.id}>
             <img src={item.image}></img>

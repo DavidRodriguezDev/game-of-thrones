@@ -2,3 +2,7 @@ body{
   background-color:#000000 ;
 }
 
+.container-fluid{
+  width: 90%;
+}
+
