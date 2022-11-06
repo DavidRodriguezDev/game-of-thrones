@@ -1,18 +1,20 @@
 .container-search{
-    height: 50px;
+    height: 70px;
     background-color: black;
     position: sticky;
     top:0px;
     z-index: 2;
     &--div{
         &--input{
+            height: 32px;
             background-color: black;
             border: 0;
             border-bottom: 1px solid white;
             outline-style: none;
             color: white;
+            font-size: 22px;
             &::placeholder{
-                color: white
+                color: rgba(255, 255, 255, 0.581)
             }
         }
     }
