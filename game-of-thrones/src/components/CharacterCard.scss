@@ -1,1 +1,75 @@
+@font-face{
+    font-family: 'GameofThrones';
+    src: url('../font/game-of-thrones/Game\ of\ Thrones.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.characters-gallery{
+
+        overflow-y: scroll;
+        height:480px ;
+        position: relative;
+        top: 25px;
+
+        &::-webkit-scrollbar {
+            width: 2px;               /* width of the entire scrollbar */
+          }
+          
+        &::-webkit-scrollbar-track {
+            background: #443d3d         /* color of the tracking area */
+          }
+          
+        &::-webkit-scrollbar-thumb {
+            background-color: white;    /* color of the scroll thumb */
+            border-radius: 10px;       /* roundness of the scroll thumb */
+            border: 0px solid orange;  /* creates padding around scroll thumb */
+          }
+    
+}
+.card-item{
+    width: 170px;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+
+    img{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+
+ 
+        .rectangle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top:200px;
+            width: 100%;
+            height: 50px;
+            // padding: 21px 28px 21px 29px;
+            background-color: rgba(0, 0, 0, 0.468);
+            
+                .name{
+                    // width: 100%;
+                    // height: 14px;
+                    font-family: 'GameOfThrones';
+                    font-size: 11px;
+                    color: white;
+
+                }
+
+            
+          }
+    
+    &:hover{
+        .rectangle{
+            display: flex;
+            
+        }
+    }
+}
 

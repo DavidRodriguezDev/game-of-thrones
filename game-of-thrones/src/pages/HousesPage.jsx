@@ -1,8 +1,14 @@
 import React from 'react'
-import { GetHouses } from '../axios/GetHouses'
+import {HousesCard} from '../components/HouseCard'
+import { Search } from '../components/Search'
 
 export const HousesPage = () => {
   return (
-    <div><GetHouses></GetHouses></div>
+    <>
+      <Search></Search>
+      <HousesCard></HousesCard>
+    </>
+
+    
   )
 }

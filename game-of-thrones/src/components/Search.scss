@@ -1,0 +1,19 @@
+.container-search{
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top:0px;
+    z-index: 2;
+    &--div{
+        &--input{
+            background-color: black;
+            border: 0;
+            border-bottom: 1px solid white;
+            outline-style: none;
+            color: white;
+            &::placeholder{
+                color: white
+            }
+        }
+    }
+}
