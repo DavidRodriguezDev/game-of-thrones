@@ -4,7 +4,7 @@ import './NavBar.scss'
 
 export const NavBar = () => {
   return (
-    <div className='container-fluid d-flex align-items-center nav'>
+    <div className='container-fluid d-flex align-items-center justify-content-center nav'>
       <nav className='container-fluid d-flex justify-content-between flex-wrap nav--container'>
       <Link to="/characters">CHARACTERS</Link>
       <Link to="/houses">HOUSES</Link>
