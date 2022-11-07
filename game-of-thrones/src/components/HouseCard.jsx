@@ -17,7 +17,7 @@ export const HousesCard = () => {
     },[])
   
     return (
-    <div className="container-fluid d-flex justify-content-between flex-wrap gap-3 houses-gallery">
+    <div className="container-fluid d-flex flex-wrap gap-3 houses-gallery">
         {houses.map((item) => 
     
                 <div className='card-shield' key={item.id}>

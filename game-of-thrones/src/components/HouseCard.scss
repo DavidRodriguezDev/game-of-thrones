@@ -8,9 +8,10 @@
 
 .houses-gallery{
     overflow-y: scroll;
-    height:740px ;
+    height:75vh ;
     position: relative;
     top: 25px;
+
 
     &::-webkit-scrollbar {
         width: 2px;               /* width of the entire scrollbar */
