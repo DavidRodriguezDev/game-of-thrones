@@ -1,20 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import axios from "axios"
+import React from 'react'
 import './HouseCard.scss'
 
 
-export const HousesCard = () => {
-
-    const[houses, setHouses] = useState([]);
-    
-    useEffect(() => {
-        const getData = async () => {
-            const {data} =await axios.get("https://api.got.show/api/show/houses")
-            setHouses(data);
-            console.log(data);
-        }
-        getData();
-    },[])
+export const HousesCard = ({houses}) => {
+ 
   
     return (
     <div className="container-fluid d-flex flex-wrap gap-3 houses-gallery">

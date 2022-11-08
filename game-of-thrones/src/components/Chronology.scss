@@ -1,0 +1,50 @@
+@font-face{
+    font-family: 'GameofThrones';
+    src: url('../font/game-of-thrones/Game\ of\ Thrones.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+.b-chronology{
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &--btn{
+      width: 50px;
+      height: 30px;
+    }
+
+
+    &--card{
+      height: 30rem;
+      width: 40%;
+      border-top: 2px solid rgb(255, 255, 255);
+      display:grid;
+      place-content: center;
+
+
+      &__img{
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+      }
+
+      &__age{
+        color:white;
+      }
+
+      &__name{
+        color:white;
+        
+      }
+
+    }
+  
+}
