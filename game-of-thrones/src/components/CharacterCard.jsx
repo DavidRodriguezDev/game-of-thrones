@@ -7,6 +7,7 @@ export const CharacterCard = ({characters}) => {
     <div className='container-fluid d-flex flex-wrap gap-4 characters-gallery '>
         {characters.map((item)=> 
         <div className='card-item' key={item.id}>
+            <div>holaaaa</div>
             <img src={item.image}></img>
             <div className='rectangle'>
             <span className='name'>{item.name}</span>
@@ -15,3 +16,6 @@ export const CharacterCard = ({characters}) => {
     </div>
   )
 }
+
+
+
