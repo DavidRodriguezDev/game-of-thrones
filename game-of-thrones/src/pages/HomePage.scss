@@ -1,0 +1,26 @@
+@font-face{
+    font-family: 'GameofThrones';
+    src: url('../font/game-of-thrones/Game\ of\ Thrones.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.b-home {
+    background-image: url("../assets/image\ 1.png");
+    background-position: contain;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__title {
+        color: white;
+        font-size: 9rem;
+        line-height: 11rem;
+        width: 1367px;
+        height: 390px;
+        text-align: center;
+        font-family: "GameofThrones";
+    }
+}
