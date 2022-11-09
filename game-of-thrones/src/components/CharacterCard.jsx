@@ -7,7 +7,7 @@ export const CharacterCard = ({characters}) => {
     <div className='container-fluid d-flex flex-wrap gap-4 characters-gallery '>
         {characters.map((item)=> 
         <div className='card-item' key={item.id}>
-            <img src={item.image}></img>
+            <img src={item.image} alt={item.name}></img>
             <div className='rectangle'>
             <span className='name'>{item.name}</span>
             </div>
