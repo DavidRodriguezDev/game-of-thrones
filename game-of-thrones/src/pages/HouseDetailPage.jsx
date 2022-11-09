@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from "axios"
-import { ComeBackButtonHou } from '../components/ComeBackButtonHou';
+import { ComeBackButton } from '../components/ComeBackButton';
 
 
 export const HouseDetailPage = () => {
@@ -22,7 +22,7 @@ export const HouseDetailPage = () => {
   
     return (
     <div>
-      <ComeBackButtonHou></ComeBackButtonHou>
+      <ComeBackButton backTo="/houses"></ComeBackButton>
       <img src={house.logoUrl} alt={house.name}></img>
       <p>{house.name}</p>
      
