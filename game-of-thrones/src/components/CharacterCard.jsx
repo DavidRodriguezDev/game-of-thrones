@@ -2,7 +2,7 @@ import React from 'react'
 import './CharacterCard.scss'
 
 export const CharacterCard = ({characters}) => {
-  
+      const hola ="hola";
     return (
     <div className='container-fluid d-flex flex-wrap gap-4 characters-gallery '>
         {characters.map((item)=> 
