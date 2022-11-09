@@ -42,11 +42,9 @@ export const Chronology = () => {
     ageOrder()
     
     return (
-      <>
+      <div className='d-flex flex-column align-items-center'>
+      {charactersLine[0] && <button className='b-chronology--btn' onClick={changeOrder}>{charactersLine[0].age.age}</button>}
       <div className='b-chronology'>
-          
-            {charactersLine[0] && <button className='b-chronology--btn' onClick={changeOrder}>{charactersLine[0].age.age}</button>}
-    
           {charactersLine.map(element => {
             return (
               <>
@@ -58,6 +56,6 @@ export const Chronology = () => {
                 </>)
           })}
       </div>
-      </>
+      </div>
     )
   }

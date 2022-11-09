@@ -15,3 +15,6 @@ export const CharacterCard = ({characters}) => {
     </div>
   )
 }
+
+
+
