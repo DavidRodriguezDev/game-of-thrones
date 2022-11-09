@@ -16,7 +16,7 @@ export const CharacterDetailPage = () => {
             console.log(data);
         }
         getData();
-    }, [])
+    }, []) 
 
     return (
     <div>
