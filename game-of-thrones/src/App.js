@@ -22,7 +22,6 @@ function App() {
           <Route path="/characters/:idCharacter" element={<CharacterDetailPage></CharacterDetailPage>} ></Route>
           <Route path="/houses/:idHouse" element={<HouseDetailPage></HouseDetailPage>} ></Route>
         </Routes>
-        <NavBar></NavBar>
     
     </Router>
 
