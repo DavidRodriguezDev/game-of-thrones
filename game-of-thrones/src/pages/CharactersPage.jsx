@@ -3,6 +3,7 @@ import { CharacterCard } from '../components/CharacterCard'
 import { useState, useEffect } from 'react'
 import axios from "axios"
 import { Search } from '../components/Search'
+import { NavBar } from '../components/NavBar'
 
 export const CharactersPage = () => {
 
@@ -18,9 +19,10 @@ export const CharactersPage = () => {
     },[])
 
   return (
-    <div>
+    <>
       <Search></Search>
       <CharacterCard characters = {characters} ></CharacterCard>
-    </div>
+      <NavBar></NavBar>
+    </>
   )
 }

@@ -13,8 +13,8 @@ export const HouseDetailPage = () => {
     useEffect(() => {
         const getData = async () => {
             const {data} = await axios.get(`https://api.got.show/api/show/houses/${idHouse}`)
-            setHouse(data);
-            console.log(data);
+            setHouse(data[0]);
+            console.log(data[0]);
         }
         getData();
     }, []) 
@@ -23,7 +23,7 @@ export const HouseDetailPage = () => {
     return (
     <div>
       <ComeBackButton backTo="/houses"></ComeBackButton>
-      <img src={house.logoUrl} alt={house.name}></img>
+      <img src={house.logoURL} alt={house.name}></img>
       <p>{house.name}</p>
      
     </div>
