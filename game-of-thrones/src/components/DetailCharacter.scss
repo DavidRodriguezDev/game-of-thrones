@@ -25,7 +25,7 @@
 
         &--box{
             width: 23vh;
-           
+            margin-bottom: 20px;
 
             &--title{
                 color:white;
@@ -36,28 +36,29 @@
             
 
             &--details{
+                overflow-y: auto;
                 height: 20vh;
                 color: white;
                 list-style: none;
                 text-align: center;
                 padding: 0;
 
+                &--logo{
+                    height: 20vh;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                    margin: 0;
+                
+                }
+
                 &--list{
                     margin-top:10px;
                     font-size: 14px;
+                    
                 }
             
-                &_scroll{
-                overflow-y: scroll;
-                height: 20vh;
-                color: white;
-                list-style:none;
-                text-align: center;
-                padding: 0;
                 
-                
-                    
-
                 &::-webkit-scrollbar {
                     width: 2px;               /* width of the entire scrollbar */
                     
@@ -77,5 +78,5 @@
         }
     }
 
-}
+
 

@@ -3,13 +3,14 @@ import './DetailCharacter.scss'
 import { useParams } from 'react-router-dom'
 import axios from "axios"
 import { ComeBackButton } from '../components/ComeBackButton';
+import {GetHouseIMG} from './GetHouseIMG';
 
 export const DetailCharacter= () => {
   
     const {idCharacter} = useParams();
     const[character, setCharacter] = useState([]);
 
-    const {appearances, titles, siblings, allegiances} = character
+    const {appearances, titles, siblings, allegiances, house} = character
     
     useEffect(() => {
         const getData = async () => {
@@ -18,7 +19,8 @@ export const DetailCharacter= () => {
             console.log(data);
         }
         getData();
-    }, []) 
+    }, [idCharacter]) 
+
 
     return (
     <>
@@ -33,7 +35,7 @@ export const DetailCharacter= () => {
 
         <div className='detail-ch--gallery--box'>
         <h2 className='detail-ch--gallery--box--title'>Casa</h2>
-        <ul className='detail-ch--gallery--box--details'><img src='' alt='{character.house}'></img></ul>
+        <ul className='detail-ch--gallery--box--details--logo'><GetHouseIMG nameHouse={house}></GetHouseIMG></ul>
         </div>
 
         <div className='detail-ch--gallery--box'>
@@ -45,7 +47,7 @@ export const DetailCharacter= () => {
 
         <div className='detail-ch--gallery--box'>
         <h2 className='detail-ch--gallery--box--title'>Apariciones</h2>
-        <ul className='detail-ch--gallery--box--details_scroll'>
+        <ul className='detail-ch--gallery--box--details'>
             {appearances && appearances.map((apariencia, index) => <li className='detail-ch--gallery--box--details--list' key={index}>{apariencia}</li>)}
             
         </ul>
@@ -65,7 +67,7 @@ export const DetailCharacter= () => {
 
         <div className='detail-ch--gallery--box'>
         <h2 className='detail-ch--gallery--box--title'>Titulos</h2>
-        <ul className='detail-ch--gallery--box--details_scroll'>
+        <ul className='detail-ch--gallery--box--details'>
         {titles && titles.map((title, index) => <li className='detail-ch--gallery--box--details--list' key={index}>{title}</li>)}
         </ul>
         </div>

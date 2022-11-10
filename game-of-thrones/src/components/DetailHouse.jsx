@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import axios from "axios"
 import { ComeBackButton } from '../components/ComeBackButton';
 
-export const CharacterDetailc= () => {
+export const CharacterDetail= () => {
   
     const {idCharacter} = useParams();
     const[character, setCharacter] = useState([]);

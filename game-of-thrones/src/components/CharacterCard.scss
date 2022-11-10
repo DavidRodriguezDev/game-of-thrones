@@ -7,8 +7,9 @@
 
 .characters-gallery{
 
-        overflow-y: scroll;
+        overflow-y: auto;
         height:80vh;
+        // scroll-behavior: smooth;
         // position: relative;
         // top: 25px;
 
