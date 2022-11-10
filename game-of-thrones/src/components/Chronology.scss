@@ -5,8 +5,8 @@
     font-weight: normal;
 }
 .b-chronology{
-    height: 100%;
-    margin: 10px;
+    overflow-y: scroll;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
