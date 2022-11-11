@@ -1,0 +1,84 @@
+.detail-house{
+    height: 200px;
+    color: white;
+
+
+    &--img-house{
+        width: 248px;
+        height: 320px;
+        margin: 3vh 1px 5vh;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    &--name{
+        color:white;
+        font-family: 'GameOfThrones';
+        font-size: 4vh;
+    }
+
+    &--gallery{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 5vh;
+        height: 23vh;
+
+        &--box{
+            width: 23vh;
+            margin-bottom: 20px;
+            text-align: center;
+
+            &--title{
+                color:white;
+                font-family: 'GameOfThrones';
+                font-size: 24px;
+                text-align: center;
+            }
+            
+
+            &--details{
+                overflow-y: auto;
+                height: 20vh;
+                color: white;
+                list-style: none;
+                text-align: center;
+                padding: 0;
+
+                &--logo{
+                    height: 20vh;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                    margin: 0;
+                
+                }
+
+                &--list{
+                    margin-top:10px;
+                    font-size: 14px;
+                    
+                }
+            
+                
+                &::-webkit-scrollbar {
+                    width: 2px;               /* width of the entire scrollbar */
+                    
+                  }
+                  
+                &::-webkit-scrollbar-track {
+                    background: #443d3d         /* color of the tracking area */
+                  }
+                  
+                &::-webkit-scrollbar-thumb {
+                    background-color: white;    /* color of the scroll thumb */
+                    border-radius: 10px;       /* roundness of the scroll thumb */
+                    border: 0px solid orange;  /* creates padding around scroll thumb */
+                  }
+                }
+            }
+        }
+    }
+
+
+
