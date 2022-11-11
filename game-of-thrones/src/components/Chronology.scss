@@ -7,10 +7,25 @@
 .b-chronology{
     overflow-y: scroll;
     height: 80vh;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    &::-webkit-scrollbar {
+      width: 2px;               /* width of the entire scrollbar */
+      
+    }
+    
+  &::-webkit-scrollbar-track {
+      background: #443d3d         /* color of the tracking area */
+    }
+    
+  &::-webkit-scrollbar-thumb {
+      background-color: white;    /* color of the scroll thumb */
+      border-radius: 10px;       /* roundness of the scroll thumb */
+      border: 0px solid orange;  /* creates padding around scroll thumb */
+    }
 
     &--btn{
       width: 60px;
