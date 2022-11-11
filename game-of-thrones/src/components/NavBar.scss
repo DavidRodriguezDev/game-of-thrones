@@ -8,6 +8,9 @@
 .nav{
     background-color: rgba(0, 0, 0, 0);
     height: 10vh;
+    position: fixed;
+    bottom: 0;
+    margin-left: 5%;
 
 
     &--container{
@@ -15,8 +18,9 @@
         width: 100%;
         
         .active{
-            transition: 500ms ;
+            
             text-shadow: yellow 0px 0px 13px;
+            transition: 500ms ;
         }
         
         a{
