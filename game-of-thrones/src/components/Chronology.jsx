@@ -43,13 +43,16 @@ export const Chronology = () => {
     
     return (
       <div className='d-flex flex-column align-items-center'>
-      {charactersLine[0] && <button className='b-chronology--btn' onClick={changeOrder}>{charactersLine[0].age.age}</button>}
+      <button className='b-chronology--btn' onClick={changeOrder}>{ascOrder ? <span>v</span> 
+            : <span>^</span>}</button>
       <div className='b-chronology'>
-          {charactersLine.map(element => {
+          {charactersLine.map((element,index) => {
             return (
               <>
-                  <div className="b-chronology--card" key={element.id}>
-                    <h4 className='b-chronology--card__age'>{element.age.age}</h4>
+                  <div className="b-chronology--card" key={index} style={index % 2 ?
+              { "margin-top": "150px", "border-left": "2px solid white" } :
+              { "margin-top": "0px", "border-right": "2px solid white" }}>
+                    <h3 className='b-chronology--card__age'>{element.age.age}</h3>
                     <h2 className="b-chronology--card__name">{element.name}</h2>
                     <img className="b-chronology--card__img"src={element.image} alt=""/>
                   </div>
