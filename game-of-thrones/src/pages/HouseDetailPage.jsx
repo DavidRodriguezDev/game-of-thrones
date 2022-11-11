@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from "axios"
-import { ComeBackButtonHou } from '../components/ComeBackButtonHou';
+import { ComeBackButton } from '../components/ComeBackButton';
 
 
 export const HouseDetailPage = () => {
@@ -13,8 +13,8 @@ export const HouseDetailPage = () => {
     useEffect(() => {
         const getData = async () => {
             const {data} = await axios.get(`https://api.got.show/api/show/houses/${idHouse}`)
-            setHouse(data);
-            console.log(data);
+            setHouse(data[0]);
+            console.log(data[0]);
         }
         getData();
     }, []) 
@@ -22,8 +22,8 @@ export const HouseDetailPage = () => {
   
     return (
     <div>
-      <ComeBackButtonHou></ComeBackButtonHou>
-      <img src={house.logoUrl} alt={house.name}></img>
+      <ComeBackButton backTo="/houses"></ComeBackButton>
+      <img src={house.logoURL} alt={house.name}></img>
       <p>{house.name}</p>
      
     </div>

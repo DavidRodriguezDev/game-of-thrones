@@ -1,10 +1,12 @@
 import React from 'react';
-import "../pages/HomePage.scss"
+import {Home} from '../components/Home'
+import { NavBar } from '../components/NavBar';
 
 export const HomePage = () => {
   return (
-    <div className='b-home'>
-      <div className='b-home__title'>GAME OF THRONES</div>
-    </div>
+<>
+  <Home></Home>
+  <NavBar></NavBar>
+</>
   )
 }

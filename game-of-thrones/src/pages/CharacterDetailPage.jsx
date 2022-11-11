@@ -1,24 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import axios from "axios"
-import { ComeBackButtonCh } from '../components/ComeBackButtonCh';
+import React from 'react'
+import {DetailCharacter} from '../components/DetailCharacter'
+
 
 export const CharacterDetailPage = () => {
   
-    const {idCharacter} = useParams();
-
-    const[character, setCharacter] = useState([]);
-    
-    useEffect(() => {
-        const getData = async () => {
-            const {data} = await axios.get(`https://api.got.show/api/show/characters/${idCharacter}`)
-            setCharacter(data);
-            console.log(data);
-        }
-        getData();
-    }, []) 
-
     return (
+<<<<<<< HEAD
     <div className='b-charactersDetail__container'>
         <ComeBackButtonCh></ComeBackButtonCh>
         <div className='b-charactersDetail__image'>
@@ -35,5 +22,8 @@ export const CharacterDetailPage = () => {
         </div>    
 
     </div>
+=======
+    <DetailCharacter></DetailCharacter>
+>>>>>>> dev
   )
 }

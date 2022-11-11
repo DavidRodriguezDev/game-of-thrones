@@ -7,10 +7,11 @@
 
 .characters-gallery{
 
-        overflow-y: scroll;
-        height:75vh;
-        position: relative;
-        top: 25px;
+        overflow-y: auto;
+        height:80vh;
+        // scroll-behavior: smooth;
+        // position: relative;
+        // top: 25px;
 
         &::-webkit-scrollbar {
             width: 2px;               /* width of the entire scrollbar */
