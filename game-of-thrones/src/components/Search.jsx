@@ -16,7 +16,7 @@ export function Search(){
             <input className="w-100 ms-3 container-search--div--input" type='text' placeholder={t('search')}></input>
             </div>
             <div className='container-search--container-lenguage'>
-                <LenguageSelect></LenguageSelect>
+                <LenguageSelect className="" ></LenguageSelect>
             </div>
         </nav>
     )
