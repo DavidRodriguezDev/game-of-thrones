@@ -13,8 +13,15 @@
     align-items: center;
 
     &--btn{
-      width: 50px;
-      height: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: solid 2px white;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      margin-top: 20px;
+
     }
 
 
@@ -30,16 +37,31 @@
         object-fit: cover;
         object-position: top;
         border-radius: 50%;
-        height: 80px;
-        width: 80px;
+        width: 100px;
+        height: 100px;
+        margin: 0 170px 19px 150px;
       }
 
       &__age{
         color:white;
+        text-align: center;
+        width: 27px;
+        height: 46px;
+        margin: 4px 170px 19px 179px;
+        font-family: 'GameofThrones';
       }
 
       &__name{
-        color:white;
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: white;
         font-family: 'GameofThrones';
       }
 
