@@ -10,8 +10,6 @@ export const DetailHouse= () => {
     const {idHouse} = useParams();
     const[house, setHouse] = useState([]);
     
-
-
     useEffect(() => {
         const getData = async () => {
             const {data} = await axios.get(`https://api.got.show/api/show/houses/${idHouse}`)
