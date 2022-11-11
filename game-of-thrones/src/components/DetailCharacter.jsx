@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './DetailCharacter.scss'
 import { useParams } from 'react-router-dom'
 import axios from "axios"
 import { ComeBackButton } from '../components/ComeBackButton';
 import {GetHouseIMG} from './GetHouseIMG';
+import { MyLangContext } from '../context/MyLangContext';
 
 export const DetailCharacter= () => {
+
+    const {t} = useContext(MyLangContext)
   
     const {idCharacter} = useParams();
     const[character, setCharacter] = useState([]);
@@ -34,19 +37,19 @@ export const DetailCharacter= () => {
         <div className='container-fluid d-flex justify-content-between detail-ch--gallery '>
 
         <div className='detail-ch--gallery--box'>
-        <h2 className='detail-ch--gallery--box--title'>Casa</h2>
+        <h2 className='detail-ch--gallery--box--title'>{t('house')}</h2>
         <ul className='detail-ch--gallery--box--details--logo'><GetHouseIMG nameHouse={house}></GetHouseIMG></ul>
         </div>
 
         <div className='detail-ch--gallery--box'>
-        <h2 className='detail-ch--gallery--box--title'>Alianzas</h2>
+        <h2 className='detail-ch--gallery--box--title'>{t('alliances')}</h2>
         <ul className='detail-ch--gallery--box--details'>
         {allegiances && allegiances.map((allegiance, index) => <li className='detail-ch--gallery--box--details--list' key={index}>{allegiance}</li>)}
         </ul>
         </div>
 
         <div className='detail-ch--gallery--box'>
-        <h2 className='detail-ch--gallery--box--title'>Apariciones</h2>
+        <h2 className='detail-ch--gallery--box--title'>{t('appearances')}</h2>
         <ul className='detail-ch--gallery--box--details'>
             {appearances && appearances.map((apariencia, index) => <li className='detail-ch--gallery--box--details--list' key={index}>{apariencia}</li>)}
             
@@ -54,19 +57,19 @@ export const DetailCharacter= () => {
         </div>
 
         <div className='detail-ch--gallery--box'>
-        <h2 className='detail-ch--gallery--box--title'>Padre</h2>
+        <h2 className='detail-ch--gallery--box--title'>{t('father')}</h2>
         <ul className='detail-ch--gallery--box--details'><li className='detail-ch--gallery--box--details--list'>{character.father}</li></ul>
         </div>
 
         <div className='detail-ch--gallery--box'>
-        <h2 className='detail-ch--gallery--box--title'>Descendientes</h2>
+        <h2 className='detail-ch--gallery--box--title'>{t('siblings')}</h2>
         <ul className='detail-ch--gallery--box--details'>
         {siblings && siblings.map((sibling, index) => <li className='detail-ch--gallery--box--details--list' key={index}>{sibling}</li>)}
         </ul>
         </div>
 
         <div className='detail-ch--gallery--box'>
-        <h2 className='detail-ch--gallery--box--title'>Titulos</h2>
+        <h2 className='detail-ch--gallery--box--title'>{t('titles')}</h2>
         <ul className='detail-ch--gallery--box--details'>
         {titles && titles.map((title, index) => <li className='detail-ch--gallery--box--details--list' key={index}>{title}</li>)}
         </ul>
