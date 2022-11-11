@@ -1,15 +1,22 @@
 .container-search{
     height: 10vh;
     background-color: black;
-    position: sticky;
-    top:0px;
-    z-index: 2;
+
+    &--container-lenguage{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 29px;
+        height: 32px;
+    }
+
     &--div{
+        border-bottom: 1px solid white;
+        width: 50%;
         &--input{
             height: 32px;
             background-color: black;
             border: 0;
-            border-bottom: 1px solid white;
             outline-style: none;
             color: white;
             font-size: 22px;

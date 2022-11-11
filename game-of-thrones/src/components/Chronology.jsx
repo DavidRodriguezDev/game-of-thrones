@@ -51,7 +51,7 @@ export const Chronology = () => {
                   <div className="b-chronology--card" key={element.id}>
                     <h4 className='b-chronology--card__age'>{element.age.age}</h4>
                     <h2 className="b-chronology--card__name">{element.name}</h2>
-                    <img className="b-chronology--card__img"src={element.image} alt=""/>
+                    <img className="b-chronology--card__img" src={element.image} alt=""/>
                   </div>
                 </>)
           })}
