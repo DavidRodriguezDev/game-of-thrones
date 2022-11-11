@@ -14,4 +14,12 @@ export const en = {
     father: 'father',
     siblings: 'siblings',
     titles: 'titles',
+
+    motto: "motto",
+    seat: 'seat',
+    region: 'region',
+    allegiance: 'allegiances',
+    religion: 'religions',
+    fundation: 'fundation',
+
 }

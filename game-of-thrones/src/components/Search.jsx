@@ -15,8 +15,8 @@ export function Search(){
 </svg>
             <input className="w-100 ms-3 container-search--div--input" type='text' placeholder={t('search')}></input>
             </div>
-            <div className='container-search--container-lenguage'>
-                <LenguageSelect className="" ></LenguageSelect>
+            <div className='w-50 d-flex justify-content-end gap-4'>
+                <LenguageSelect></LenguageSelect>
             </div>
         </nav>
     )

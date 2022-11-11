@@ -15,4 +15,11 @@ export const es = {
     siblings: 'hermanos',
     titles: 'titulos',
 
+    motto: "lema",
+    seat: 'sede',
+    region: 'region',
+    allegiance: 'alianzas',
+    religion: 'religiones',
+    fundation: 'fundacion',
+
 }

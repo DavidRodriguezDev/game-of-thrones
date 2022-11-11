@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import "./Chronology.scss"
+import { LenguageSelect } from './LenguageSelect';
 
 export const Chronology = () => {
     const [timeline, setTimeline] = useState([]);
@@ -42,6 +43,10 @@ export const Chronology = () => {
     ageOrder()
     
     return (
+      <>
+      <div className='container-fluid d-flex align-items-center justify-content-end gap-4 container-search'>
+      <LenguageSelect></LenguageSelect>
+      </div>
       <div className='d-flex flex-column align-items-center'>
       <button className='b-chronology--btn' onClick={changeOrder}>{ascOrder ? <span>v</span> 
             : <span>^</span>}</button>
@@ -60,5 +65,6 @@ export const Chronology = () => {
           })}
       </div>
       </div>
+      </>
     )
   }
