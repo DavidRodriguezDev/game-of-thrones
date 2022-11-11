@@ -2,32 +2,77 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from "axios"
 import { ComeBackButton } from '../components/ComeBackButton';
+import "./DetailHouse.scss";
 
-export const CharacterDetail= () => {
+
+export const DetailHouse= () => {
   
-    const {idCharacter} = useParams();
-    const[character, setCharacter] = useState([]);
+    const {idHouse} = useParams();
+    const[house, setHouse] = useState([]);
     
+
+
     useEffect(() => {
         const getData = async () => {
-            const {data} = await axios.get(`https://api.got.show/api/show/characters/${idCharacter}`)
-            setCharacter(data);
+            const {data} = await axios.get(`https://api.got.show/api/show/houses/${idHouse}`)
+            setHouse(data[0]);
             console.log(data);
         }
         getData();
-    }, []) 
+    }, [idHouse])  
 
     return (
-    <div>
-        <ComeBackButton backTo="/characters"></ComeBackButton>
-        <img src={character.image} alt={character.name}></img>
-        <h2>{character.name}</h2>
-        <p>{character.house}</p>
-        <p>{character.allegiances}</p>
-        <p>{character.appearances}</p>
-        <p>{character.father}</p>
-        <p>{character.siblings}</p>
-        <p>{character.titles}</p>
+    <>
+    <ComeBackButton backTo="/houses"></ComeBackButton>
+    <div className='container-fluid d-flex align-items-center flex-column detail-house'>
+        
+        <img className='detail-house--img-house' src={house && house.logoURL} alt={house[0] && house[0].name}></img>
+        <h1 className='detail-house--name'>{house && house.name}</h1>
+        
+        <div className='container-fluid d-flex justify-content-between detail-house--gallery '>
+
+        <div className='detail-house--gallery--box'>
+            <h2 className='detail-house--gallery--box--title'>Lema</h2>
+            <p className='detail-house--gallery--box--details--logo'>{house && house.sigil}</p>
+        </div>
+
+        <div className='detail-house--gallery--box'>
+        <h2 className='detail-house--gallery--box--title'>Sede</h2>
+        <p className='detail-house--gallery--box--details'>
+            {house && house.seat}
+        </p>
+        </div>
+
+        <div className='detail-house--gallery--box'>
+        <h2 className='detail-house--gallery--box--title'>Region</h2>
+        <ul className='detail-house--gallery--box--details'>
+            {house.region && house.region.map((region, index) => <li className='detail-house--gallery--box--details--list' key={index}>{region}</li>)}
+        </ul>
+        </div>
+
+        <div className='detail-house--gallery--box'>
+        <h2 className='detail-house--gallery--box--title'>Alianzas</h2>
+        <ul className='detail-house--gallery--box--details'>
+            {house.allegiance && house.allegiance.map((allegiance, index) => <li className='detail-house--gallery--box--details--list' key={index}>{allegiance}</li>)}
+        </ul>
+        </div>
+        
+        <div className='detail-house--gallery--box'>
+        <h2 className='detail-house--gallery--box--title'>Religiones</h2>
+        <ul className='detail-house--gallery--box--details'>
+            {house.religion && house.religion.map((religion, index) => <li className='detail-house--gallery--box--details--list' key={index}>{religion}</li>)}
+        </ul>
+        </div>
+
+        <div className='detail-house--gallery--box'>
+        <h2 className='detail-house--gallery--box--title'>Fundacion</h2>
+        <ul className='detail-house--gallery--box--details'>
+            <li>{house.createdAt}</li>
+        </ul>
+        </div>
+
+        </div>
     </div>
+    </>
   )
 }
