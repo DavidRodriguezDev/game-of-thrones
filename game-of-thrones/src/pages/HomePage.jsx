@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {Home} from '../components/Home'
+import { NavBar } from '../components/NavBar';
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+<>
+  <Home></Home>
+  <NavBar></NavBar>
+</>
   )
 }

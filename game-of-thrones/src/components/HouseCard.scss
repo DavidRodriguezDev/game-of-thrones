@@ -8,9 +8,9 @@
 
 .houses-gallery{
     overflow-y: scroll;
-    height:75vh ;
-    position: relative;
-    top: 25px;
+    height:80vh ;
+    // position: relative;
+    // top: 25px;
 
 
     &::-webkit-scrollbar {
@@ -36,6 +36,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
 
 
   &--div-img{

@@ -1,7 +1,12 @@
-
+@font-face{
+    font-family: 'GameofThrones';
+    src: url('../font/game-of-thrones/Game\ of\ Thrones.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
 .b-chronology{
-    height: 100%;
-    margin: 10px;
+    overflow-y: scroll;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

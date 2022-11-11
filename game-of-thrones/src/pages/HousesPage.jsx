@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import {HousesCard} from '../components/HouseCard'
+import { NavBar } from '../components/NavBar'
 import { Search } from '../components/Search'
 
 export const HousesPage = () => {
@@ -21,6 +22,7 @@ export const HousesPage = () => {
     <>
       <Search></Search>
       <HousesCard houses={myHouses}></HousesCard>
+      <NavBar></NavBar>
     </>
 
     
