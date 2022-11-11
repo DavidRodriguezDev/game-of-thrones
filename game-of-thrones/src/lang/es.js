@@ -14,4 +14,5 @@ export const es = {
     father: 'padre',
     siblings: 'hermanos',
     titles: 'titulos',
+
 }
