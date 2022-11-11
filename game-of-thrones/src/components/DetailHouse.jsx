@@ -9,14 +9,16 @@ export const DetailHouse= () => {
   
     const {idHouse} = useParams();
     const[house, setHouse] = useState([]);
-    
+    const algo = "hassadsadsadsaddasdsad"
+    const date = algo.substring(0,1)
+    console.log(date)
 
 
     useEffect(() => {
         const getData = async () => {
             const {data} = await axios.get(`https://api.got.show/api/show/houses/${idHouse}`)
             setHouse(data[0]);
-            console.log(data);
+            console.log(data[0]);
         }
         getData();
     }, [idHouse])  
@@ -67,7 +69,7 @@ export const DetailHouse= () => {
         <div className='detail-house--gallery--box'>
         <h2 className='detail-house--gallery--box--title'>Fundacion</h2>
         <ul className='detail-house--gallery--box--details'>
-            <li>{house.createdAt}</li>
+            <li></li>
         </ul>
         </div>
 
