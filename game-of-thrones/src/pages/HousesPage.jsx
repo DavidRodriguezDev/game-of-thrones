@@ -7,21 +7,27 @@ import { Search } from '../components/Search'
 export const HousesPage = () => {
 
   const[myHouses, setMyHouses] = useState([]);
+  const[housesFiltered, setHousesFiltered] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
         const {data} =await axios.get("https://api.got.show/api/show/houses")
         setMyHouses(data);
-        console.log(data);
+        setHousesFiltered(data);
     }
     getData();
 },[])
 
+    const searchHouses = (name) => {
+      const filtered = myHouses.filter((house) => house.name.toLowerCase().includes(name.toLowerCase()))
+      setHousesFiltered(filtered)
+    } 
+
 
   return (
     <>
-      <Search></Search>
-      <HousesCard houses={myHouses}></HousesCard>
+      <Search setSearch={searchHouses}></Search>
+      <HousesCard houses={housesFiltered}></HousesCard>
       <NavBar></NavBar>
     </>
 
