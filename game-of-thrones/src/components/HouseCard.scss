@@ -65,3 +65,15 @@
  }
 }
 
+@media screen and (max-width: 700px) {
+
+  .houses-gallery {
+      display: flex;
+      justify-content: center;
+  }
+
+  .card-shield {
+      width: 200px;
+      height: 290px;
+  }
+}

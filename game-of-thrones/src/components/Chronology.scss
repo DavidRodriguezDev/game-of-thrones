@@ -83,3 +83,15 @@
     }
   
 }
+
+@media screen and (max-width: 700px) {
+
+  .b-chronology--card__name {
+    font-size: 10px;
+  }
+
+  .b-chronology--card__img {
+    width: 75px;
+    height: 75px;
+  }
+}

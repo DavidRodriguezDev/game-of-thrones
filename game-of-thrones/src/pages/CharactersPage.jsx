@@ -15,7 +15,6 @@ export const CharactersPage = () => {
             const {data} = await axios.get("https://api.got.show/api/show/characters/")
             setCharacters([...data]);
             setCharactersFiltered([...data]);
-            console.log(data)
         }
         getData();
     },[])
